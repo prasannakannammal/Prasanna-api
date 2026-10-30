@@ -91,5 +91,6 @@ payload]]></ee:set-payload>
 	<flow name="validation-projectFlow" doc:id="1ddd40ab-7d30-4f2d-ba3a-91a0a9bdcb9b" >
 		<http:listener doc:name="Listener" doc:id="03aa695d-d3ea-47b6-8fdb-bc11a1406db6" config-ref="HTTP_Listener_config" path="/elapsed"/>
 		<validation:is-not-elapsed time='#[20]' doc:name="Is not elapsed" doc:id="2cdf41bd-d430-4691-8067-8708503aba3a" config-ref="Validation_Config14" timeUnit="SECONDS" since="#[(payload.otpGeneratedAt as DateTime) as LocalDateTime]"/>
+			<logger level="INFO" doc:name="Logger" doc:id="d1e95ed6-df12-4db5-94fd-d687ee0c2989" message="#[payload]" category="AFTER IS NOT=================================================&gt;"/>
 	</flow>
 </mule>
