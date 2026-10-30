@@ -114,5 +114,7 @@ output application/json
 			</otherwise>
 		</choice>
 		<logger level="INFO" doc:name="Logger" doc:id="d1e95ed6-df12-4db5-94fd-d687ee0c2989" message="#[payload]" category="AFTER IS NOT=================================================&gt;"/>
+					<logger level="INFO" doc:name="Logger" doc:id="d1e95ed6-df12-4db5-94fd-d687ee0c2989" message="#[payload]" category="AFTER IS NOT the Prasanna=================================================&gt;"/>
+
 	</flow>
 </mule>
